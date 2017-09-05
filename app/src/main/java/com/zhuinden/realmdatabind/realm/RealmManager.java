@@ -19,7 +19,8 @@ public class RealmManager {
     public static void initializeRealmConfig(Context appContext) {
         if(realmConfiguration == null) {
             Log.d(TAG, "Initializing Realm configuration.");
-            setRealmConfiguration(new RealmConfiguration.Builder(appContext).initialData(new RealmInitialData())
+            Realm.init(appContext);
+            setRealmConfiguration(new RealmConfiguration.Builder().initialData(new RealmInitialData())
                     .deleteRealmIfMigrationNeeded()
                     .inMemory()
                     .build());

@@ -20,7 +20,7 @@ import io.realm.RealmRecyclerViewAdapter;
  */
 public class RealmPostAdapter extends RealmRecyclerViewAdapter<Post, RealmPostViewHolder> {
     public RealmPostAdapter(@NonNull Context context, @Nullable OrderedRealmCollection<Post> data) {
-        super(context, data, true);
+        super(data, true);
     }
 
     @Override
